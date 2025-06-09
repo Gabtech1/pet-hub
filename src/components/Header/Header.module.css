@@ -5,6 +5,7 @@
     padding: 0px 80px;
     height: 80px;
     width: 100%;
+    overflow: hidden;
 }
 
 .logo {

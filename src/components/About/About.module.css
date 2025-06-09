@@ -4,7 +4,9 @@
     width: 100%;
     padding: 20px;
     display: flex;
+    align-items: center;
     flex-direction: column;
+    overflow: hidden;
 }
 
 .about h2 {
@@ -95,7 +97,7 @@
 
 @media (max-width: 600px) {
     .about h2 {
-        font-size: 2.2rem;
+        font-size: 2rem;
     }
 
     .container::after {
@@ -106,8 +108,8 @@
     }
 
     .card {
-        height: 320px;
-        width: 320px;
+        height: 300px;
+        width: 300px;
     }
 
     .card h3 {
