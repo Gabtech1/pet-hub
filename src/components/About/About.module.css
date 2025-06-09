@@ -1,0 +1,123 @@
+.about {
+    height: 100%;
+    max-width: 1200px;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 70px;
+    color: #281a01;
+    text-align: center;
+}
+
+.container {
+    display: grid;
+    max-width: 1200px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr 1fr;
+    gap: 40px;
+    justify-items: center;
+    padding: 20px;
+    position: relative;
+}
+
+.container::after {
+    content: '';
+    background: url('../../../public/dec.png') no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    right: calc(50% - 25px);
+    top: calc(50% - 25px);
+    width: 50px;
+    height: 50px;
+    animation: spin 20s infinite alternate;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(-180deg);
+    }
+
+    100% {
+        transform: rotate(3600deg);
+    }
+}
+
+.card {
+    height: 500px;
+    width: 500px;
+    border-radius: 50px;
+    color: #fff;
+    flex: 1;
+    margin: 7px;
+    position: relative;
+    transition: flex 0.7s ease-in;
+    background: no-repeat 100% 15%;
+    background-size: cover;
+}
+
+.card h3 {
+    font-size: 1.1rem;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.info {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.75);
+    color: #000;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+@media (max-width: 1100px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .container::after {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 600px) {
+    .about h2 {
+        font-size: 2.2rem;
+    }
+
+    .container::after {
+        width: 30px;
+        height: 30px;
+        right: calc(50% - 20px);
+        top: calc(50% - 20px);
+    }
+
+    .card {
+        height: 320px;
+        width: 320px;
+    }
+
+    .card h3 {
+        font-size: 0.8rem;
+        top: 15px;
+    }
+
+    .info {
+        bottom: 15px;
+        padding: 5px;
+        font-size: 0.8rem;
+    }
+}

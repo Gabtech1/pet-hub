@@ -1,0 +1,119 @@
+.title {
+    margin: 50px 0;
+    text-align: center;
+    color: #111;
+    position: relative;
+    font-size: 2rem;
+}
+
+.title::after {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: url('../../../public/dec.png') no-repeat center center;
+    background-size: cover;
+    right: -60px;
+}
+
+.faq_container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.faq {
+    background-color: #f0f0f0;
+    border: 1px solid #281a01;
+    border-radius: 10px;
+    margin: 20px 0;
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s ease;
+}
+
+.faq.active {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.ask {
+    margin: 0 35px 0 0;
+}
+
+.answer {
+    display: none;
+    margin: 30px 0 0;
+}
+
+.faq.active .answer {
+    display: block;
+}
+
+.btn {
+    border: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    padding: 5px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border-radius: 50%;
+    background-color: #ffa500;
+}
+
+.faq.active .btn {
+    background-color: #f9fc59;
+}
+
+@media (max-width: 800px) {
+    .faq_container {
+        padding: 0 20px;
+        max-width: 500px;
+    }
+
+    .faq {
+        padding: 20px;
+    }
+
+    .btn {
+        font-size: 1rem;
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 600px) {
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .title::after {
+        width: 30px;
+        height: 30px;
+        right: -40px;
+    }
+}
+
+@media (max-width: 400px) {
+    .title {
+        font-size: 1.2rem;
+    }
+
+    .title::after {
+        width: 25px;
+        height: 25px;
+        right: 45%;
+        bottom: -40px;
+    }
+
+    .btn {
+        width: 35px;
+        height: 35px;
+        font-size: 0.9rem;
+    }
+
+}

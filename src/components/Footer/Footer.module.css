@@ -1,0 +1,146 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1rem;
+    background-color: #f0f0f0;
+    color: #111;
+    height: 500px;
+    position: relative;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 30px;
+}
+
+.logo img {
+    width: 200px;
+    display: block;
+    height: auto;
+}
+
+.map {
+    width: 250px;
+    height: 200px;
+    border-radius: 12px;
+}
+
+.wpp {
+    display: flex;
+    align-items: center;
+    color: #111;
+    gap: 20px;
+}
+
+.wpp img {
+    width: 30px;
+    height: 30px;
+    animation: shake 2s ease-in-out infinite;
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-5px);
+    }
+
+    50% {
+        transform: translateX(5px);
+    }
+
+    75% {
+        transform: translateX(-5px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.copy {
+    color: #281a01;
+    margin-top: 30px;
+}
+
+.copy span {
+    color: #ffa500;
+}
+
+.contact {
+    padding: 10px;
+    color: #111;
+    font-size: 1.1rem;
+}
+
+.footer h3 {
+    font-size: 2.2rem;
+    color: #000;
+}
+
+.contact ul li {
+    margin-bottom: 5px;
+}
+
+.contact ul li:nth-child(2),
+.contact ul li:nth-child(4) {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.contact ul li:nth-child(2)::after,
+.contact ul li:nth-child(4)::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    background-color: #ffa500;
+    width: 100%;
+    bottom: -15px;
+    left: 0;
+    opacity: .6;
+}
+
+/* Responsive media queries */
+@media (max-width: 900px) {
+    .container {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .footer {
+        height: auto;
+    }
+}
+
+@media (max-width: 400px) {
+    .logo img {
+        width: 150px;
+    }
+
+    .map {
+        width: 220px;
+        height: 180px;
+    }
+
+    .wpp img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .footer h3 {
+        font-size: 1.8rem;
+    }
+
+    .copy {
+        font-size: 0.8rem;
+    }
+}
