@@ -74,6 +74,7 @@
         width: 100%;
         align-items: center;
         color: #fff;
+        z-index: 7;
     }
 
     .hamburger {
