@@ -10,4 +10,4 @@ Projeto pessoal desenvolvido em nextjs. <br/>
   <img alt="projeto Pet Hub" src="./public/preview.jpg" width="100%">
 </p>
 
-- [Acesse o projeto finalizado, online](https://pet-hub.vercel.app/)
+- [Acesse o projeto finalizado, online](https://pet-hub-one.vercel.app/)
